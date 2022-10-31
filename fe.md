@@ -117,11 +117,11 @@ nano .env.local
 Paste và điều chỉnh các thông số sau:
 
 ```
-VUE_APP_API = http://backendip:8081     # thay 'backendip' bằng ip của server chạy service heap-overflow-be
-VUE_APP_URL = backendip                 # thay 'backendip' bằng ip của server chạy service heap-overflow-be
-VUE_APP_PORT = 8080                     # đây chỉ là port khi build dev, không ảnh hưởng việc build production
-VUE_APP_SOCKET_PORT = 5000              # port chạy socket của heap-overflow-be
-DANGEROUSLY_DISABLE_HOST_CHECK = true   # không thay đổi giá trị này
+VUE_APP_API = http://backendip:backendport      # thay 'backendip', 'backendport' bằng ip, port của server chạy service heap-overflow-be
+VUE_APP_URL = backendip                         # thay 'backendip' bằng ip của server chạy service heap-overflow-be
+VUE_APP_PORT = 8080                             # đây chỉ là port khi build dev, không ảnh hưởng việc build production
+VUE_APP_SOCKET_PORT = 5000                      # port chạy socket của heap-overflow-be
+DANGEROUSLY_DISABLE_HOST_CHECK = true           # không thay đổi giá trị này
 ```
 
 5. Tải về các dependency

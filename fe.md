@@ -2,7 +2,7 @@
 ```
 - RAM: tối thiểu 1 GB
 - CPU: tối thiểu 1 Core
-- SSD không cần nhiều
+- SSD: không cần nhiều
 - Chạy hệ điều hành Ubuntu với quyền root
 ```
 
@@ -16,6 +16,11 @@ sudo apt-get upgrade
 ```
 
 2. Cài đặt Git
+
+```
+sudo apt install git
+```
+
 3. Clone project từ Git
 
 ```
@@ -23,6 +28,13 @@ git clone https://github.com/HANU-GDSC/heap-overflow-fe.git
 ```
 
 4. Cài đặt NVM (Node Version Manager)
+
+```
+sudo apt install curl 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+source ~/.profile 
+```
+
 5. Cài đặt Node `v18.8.0` bằng NVM
 
 ```
@@ -101,7 +113,16 @@ git pull
 ```
 nano .env.local
 ```
- Sau đó cài đặt theo template từ file mẫu `.env` ở thư mục gốc của project
+
+Paste và điều chỉnh các thông số sau:
+
+```
+VUE_APP_API = http://backendip:8081     # thay 'backendip' bằng ip của server chạy service heap-overflow-be
+VUE_APP_URL = backendip                 # thay 'backendip' bằng ip của server chạy service heap-overflow-be
+VUE_APP_PORT = 8080                     # đây chỉ là port khi build dev, không ảnh hưởng việc build production
+VUE_APP_SOCKET_PORT = 5000              # port chạy socket của heap-overflow-be
+DANGEROUSLY_DISABLE_HOST_CHECK = true   # không thay đổi giá trị này
+```
 
 5. Build bản production cho project
 

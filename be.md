@@ -180,7 +180,7 @@ springdoc.swagger-ui.path=/swagger-ui.html
 springdoc.swagger-ui.operationsSorter=method
 
 # ===============================
-#RABBITMQ
+# RABBITMQ
 # ===============================
 
 spring.rabbitmq.host=localhost                                        # ip của server chạy RabbitMQ

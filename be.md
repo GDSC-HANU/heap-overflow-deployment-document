@@ -82,6 +82,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
+sudo systemctl start docker
 sudo systemctl status docker
 ```
 

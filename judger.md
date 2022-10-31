@@ -44,7 +44,7 @@ sudo apt install maven
 6. Mở port
 
 ```
-sudo ufw allow 8080/tcp     # port for Restful API, change if needed
+sudo ufw allow 8080/tcp     # port for Restful API (for monitoring), change if needed
 ```
 
 
@@ -59,7 +59,7 @@ Hệ thống có sử dụng MySQL và RabbitMQ mà hệ thống back end dùng,
 1. Trỏ đến thư mục project
 
 ```
-cd heap-overflow-be/
+cd heap-overflow-judger/
 ```
 
 2. Pull project nếu cần cập nhật code mới
@@ -121,8 +121,8 @@ runningsubmission.scanratemillis=5000                                # tần su�
 runningsubmission.scanlocksecond=300                                 # thời gian khóa submission của Coder để judge (second), mục đích để tránh case 2 thread cùng judge một submission
 
 runningsubmission.vmurls=                                            # danh sách urls của các service heap-overflow-virtual-machine, ngăn cách bởi ',' ví dụ: "http://someipaddress1:2358,http://someipaddress2:2358" 
-runningsubmission.vmtoken=                                           # AUTHN_TOKEN được config khi deploy service heap-overflow-virtual-machine (config cho các service này bắt buộc phải giống nhau)
-runningsubmission.vmuser=                                            # AUTHZ_TOKEN được config khi deploy service heap-overflow-virtual-machine (config cho các service này bắt buộc phải giống nhau)
+runningsubmission.vmtoken=heapoverflow                               # AUTHN_TOKEN được config khi deploy service heap-overflow-virtual-machine (config cho các service này bắt buộc phải giống nhau), mặc định là "heapoverflow"
+runningsubmission.vmuser=heapoverflow                                # AUTHZ_TOKEN được config khi deploy service heap-overflow-virtual-machine (config cho các service này bắt buộc phải giống nhau), mặc định là "heapoverflow"
 runningSubmission.vmdeletesubmission=true                            # heap-overflow-virtual-machine sẽ lưu lại data mỗi lần compile & interpret code, set 'true' nếu muốn xóa data đó (luôn để 'true', trừ khi có job tự xóa db cùng server với virtual-machine) 
 
 # ===============================

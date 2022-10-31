@@ -124,13 +124,20 @@ VUE_APP_SOCKET_PORT = 5000              # port chạy socket của heap-overflow
 DANGEROUSLY_DISABLE_HOST_CHECK = true   # không thay đổi giá trị này
 ```
 
-5. Build bản production cho project
+5. Tải về các dependency
+
+```
+npm i
+npm install element-plus --save
+```
+
+6. Build bản production cho project
 
 ```
 npm run build
 ```
 
-6. Chạy project
+7. Chạy project
 
 ```
 serve -s dist

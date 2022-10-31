@@ -192,5 +192,8 @@ spring.rabbitmq.password=guest                                        # password
 5. Chạy project
 
 ```
+screen
 mvn spring-boot:run
 ```
+
+Thoát server

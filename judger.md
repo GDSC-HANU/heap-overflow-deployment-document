@@ -50,7 +50,7 @@ sudo ufw allow 8080/tcp     # port for Restful API (for monitoring), change if n
 
 ## Các công nghệ đi kèm
 
-Hệ thống có sử dụng MySQL và RabbitMQ mà hệ thống back end dùng, nếu có thì xem tại file hướng dẫn deploy back end tại [đây](be.md)
+Hệ thống sử dụng MySQL và RabbitMQ mà hệ thống back end dùng, nếu chưa deploy thì xem file hướng dẫn deploy back end tại [đây](be.md)
 
 
 

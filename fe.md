@@ -140,6 +140,7 @@ npm run build
 7. Chạy project
 
 ```
+npm install -g serve (nếu chưa cài serve)
 serve -s dist
 ```
 
